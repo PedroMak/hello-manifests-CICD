@@ -2,7 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: helloapp-svc
-  labels: helloapp
+  labels: 
+    app: helloapp
 spec:
   type: ClusterIP
   selector:
