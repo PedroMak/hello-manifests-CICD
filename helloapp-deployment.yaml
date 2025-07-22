@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloapp-deployment
+  labels:
+    app: helloapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-app
+  template:
+    metadata:
+      name: helloapp
+      labels:
+        app: hello-app
+    spec:
+      containers:
+        - name: hello-app
+          image: pedromak/hello-app:main-v1
+          ports:
+            - containerPort: 8000
