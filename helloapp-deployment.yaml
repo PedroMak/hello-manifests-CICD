@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: hello-app
-          image: pedromak/hello-app:main-v2
+          image: pedromak/hello-app:main-v3
           ports:
             - containerPort: 8000
